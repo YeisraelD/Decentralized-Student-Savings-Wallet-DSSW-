@@ -1,0 +1,18 @@
+DSSW
+
+The Decentralized Student Savings Wallet (DSSW) is a simple Web3 mini project that demonstrates how
+The smart contract allows users to deposit, store, and withdraw ETH while maintaining full
+ownership of their funds through their blockchain address.
+
+All transactions are recorded on the Ethereum blockchain, ensuring transparency, security,
+and immutability without relying on any centralized authority.
+
+Features
+- Deposit ETH into the wallet
+- Withdraw ETH if sufficient balance exists
+- Track user balances using mappings
+- Store transaction history using structs and arrays
+- View balance and transaction history
+- Transparent and auditable on chain transactions
+
+once those are implimented, othe cool features can be added....
