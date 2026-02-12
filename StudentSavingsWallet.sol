@@ -87,4 +87,9 @@ contract StudentSavingsWallet {
         minimumDeposit = newMininum;
         emit MinimumDepositUpdated(newMininum);
     }
+
+    function setWithdrawalTimeLock(uint256 newTimeLock) public onlyOwner {
+        withdrawTimeLock = newTimeLock;
+        emit TimeLockUpdated(newTimeLock);
+    }
 }
