@@ -12,9 +12,13 @@ contract StudentSavingsWallet {
 
     mapping(address => uint256) private balances;
     mapping(address => Transaction[]) private transactionHistory;
+    mapping(address => uint256) private lastDepositTime;
 
     event Deposited(address indexed user, uint256 amount);
     event Withdrawn(address indexed user, uint256 amount);
+    event MinimumDepositUpdated(uint256 newAmount);
+    event TimeLockUpdated(uint256 newTimeLock);
+    
 
     // Deposit ETH into the wallet
     function deposit() public payable {
