@@ -2,13 +2,17 @@
 pragma solidity ^0.8.20;
 
 contract StudentSavingsWallet {
-
-   
     struct Transaction {
         uint256 amount;
         string txType; // "Deposit" or "Withdrawal"
         uint256 timestamp;
     }
+
+    // sate variables
+    address public owner;
+    uint256 public minimumDeposit;
+    uint256 public withdrawTimeLock;
+
 
     mapping(address => uint256) private balances;
     mapping(address => Transaction[]) private transactionHistory;
@@ -18,7 +22,20 @@ contract StudentSavingsWallet {
     event Withdrawn(address indexed user, uint256 amount);
     event MinimumDepositUpdated(uint256 newAmount);
     event TimeLockUpdated(uint256 newTimeLock);
-    
+
+    modifier onlyOwner() {
+        require(msg.sender == owner, "only owner allowed");
+        _;
+    }
+
+    constructor(uint256 _minimumDeposit, uint256 _timeLock){
+        owner = msg.sender;
+        minimumDeposit = _minimumDeposit;
+        withdrawTimeLock = _timeLock;
+    }
+
+
+
 
     // Deposit ETH into the wallet
     function deposit() public payable {
@@ -63,5 +80,11 @@ contract StudentSavingsWallet {
         returns (Transaction[] memory)
     {
         return transactionHistory[msg.sender];
+    }
+
+    //owner functions
+    function setMinimumDeposit(uint256 newMininum) public onlyOwner{
+        minimumDeposit = newMininum;
+        emit MinimumDepositUpdated(newMininum);
     }
 }
