@@ -16,3 +16,8 @@ Features
 - Transparent and auditable on chain transactions
 
 once those are implimented, othe cool features can be added....
+like: 
+- Emit events for deposits and withdrawals
+- Set a minimum deposit amount
+- Add a time-lock mechanism for withdrawals
+- Implement an owner or admin role
