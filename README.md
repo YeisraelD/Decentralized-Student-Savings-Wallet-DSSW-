@@ -24,9 +24,8 @@ like:
 
 <img width="1889" height="402" alt="image" src="https://github.com/user-attachments/assets/a6f78432-9c1f-4062-8ca8-c47db118453c" />
 
-
-
 Deployment Details (just sample)
+
 Network: Sepolia Ethereum Testnet
 Contract Address: 0x2526b4da81a72765909fa786993549dee908c19e
 Deployment Transaction Hash: 0xf2dcdee97fe888f416c6b3a8e5068389bb463b34b9afbc19f381bcb554f0191c
