@@ -21,3 +21,17 @@ like:
 - Set a minimum deposit amount
 - Add a time-lock mechanism for withdrawals
 - Implement an owner or admin role
+
+
+
+Deployment Details (just sample)
+Network: Sepolia Ethereum Testnet
+Contract Address: 0x2526b4da81a72765909fa786993549dee908c19e
+Deployment Transaction Hash: 0xf2dcdee97fe888f416c6b3a8e5068389bb463b34b9afbc19f381bcb554f0191c
+
+You can verify the contract on: (https://sepolia.etherscan.io/)
+
+
+
+
+
